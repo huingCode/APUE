@@ -1,0 +1,23 @@
+vi cmd:dd删除一行 
+共享库(动态库) .dll
+.a表示静态库
+ar rcs libmylib.a file.o
+共享库：
+linux下共享库后缀为.so
+gcc -fPIC -c a.c
+gcc -f PIC -c b.c
+gcc -shared -Wl -o libmyab.so a.o b.o
+
+gcc -c参数 只编译不链接 只生成.o文件
+gcc -shared 生成共享库参数
+
+gcc -shared -Wl,-soname,libmyabc.so.1 -o libmyabc.so.1.10 a.o b.o c.o d.o
+
+ldd命令 查看程序依赖的库
+
+ vi /etc/ld.so.conf 添加库所在的路径，路径长度为文件名的上级文件夹
+ldconfig -v更新库
+
+real name
+so name:只记录库的主版本号，在运行阶段判断能否运行
+link name：记录库名，为库名创建别名，方便编译链接makefile

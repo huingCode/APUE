@@ -1,0 +1,18 @@
+cat /etc/shells
+echo $SHELL
+ctl a 跳转到命令行首
+cat d 删除光标选定字符
+ctl e 跳转到命令行尾
+cd - 返回返回上一个路径
+find . -name "file*"
+fine / -name ""file1"
+fine ~ -name "".c
+grep "include" ./* -R
+ctl z “暂停”并添加到作业列表
+jobs 查看所有作业
+fg 1 把作业唤醒到前台
+gb 1 把作业唤醒到后台
+
+kill 向指定进程发送信号
+kill -l 查看所有信号列表
+SIGINT=ctl c 

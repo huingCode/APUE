@@ -1,0 +1,4 @@
+ulimit -a 
+cat /proc/sys/fs/file-max
+type int ssize_t
+type unsignd size_t 
